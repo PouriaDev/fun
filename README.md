@@ -1,6 +1,4 @@
-# lua-api-bot
-
-A simple telegram-bot wtitten in LUA based on [file manager bot](https://github.com/Imandaneshi/file-manager-bot)
+# HyperLink-Bot
 
 # commands
 
@@ -59,8 +57,8 @@ sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-d
 Clone the bot
 
 ```
-git clone https://github.com/pAyDaAr/lua-api-bot.git
-cd lua-api-bot
+git clone https://github.com/PouriaDev/hyperlink.git
+cd hyperlink
 
 ```
 
