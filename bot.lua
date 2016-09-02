@@ -280,6 +280,15 @@ elseif msg.text:match("^/linkch (.*) (.*) (.*)") then
  local text = '`'..matches[2]..'`'
  local channel = matches[1]
  sendMessage(channel, text, true, false, true)
+ 
+elseif msg.text:match("^/sticker (.*)") then
+ local matches = { string.match(msg.text, "^/sticker (.*)") }
+ local text = URL.escape(matches[2])
+ local colors = {'blue','green','yellow','magenta','Orange','DarkOrange','red','black'}
+ local fonts = {'mathbf','mathit','mathfrak','mathrm'}
+ local url = 'http://latex.codecogs.com/png.latex?'..'\\dpi{700}%20\\huge%20\\'..fonts[math.random(#fonts)]..'{{\\color{'..colors[math.random(#colors)]..'}'..text..'}}'
+ local file = download_to_file(url,'file.webp')
+ sendSticker(msg.chat.id, file, true, false, true)
 
 elseif msg.text:match("^/[sS]tart") or msg.text:match("^/[Hh]elp") then
  sendMessage(msg.chat.id, start, true, false, true)
